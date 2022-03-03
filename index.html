@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumé - Site: Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <script>
+        function backGroundColorChanger(e) {
+            if (e.altKey == true && e.srcElement.alt == "HTML5 Logo") {
+                document.querySelector("body").style.background = "white";
+            }
+        }
+        function keyPress(e) {
+            jokes = [
+                "I'm afraid for the celendar. Its days are numbered.",
+                "Why do father take an extra pair of socks when they go golfing? Incase they get a hole in one!",
+                "What did the ocean say to the bench? Nothing, it just waved.",
+                "Where do fruits go on vaccation? Pear-is!",
+                "What does a sprinter eat before the a race? Nothing, they fast!"
+            ]
+            emojis = [
+                "😂",
+                "😎",
+                "🤡"
+            ]
+
+            if (e.ctrlKey && e.key === "z") {
+                alert(`${jokes[getRandomInt(5)]} ${emojis[getRandomInt(3)]}`)
+            }
+        }
+        function getRandomInt(max) {
+            return Math.floor(Math.random()*(max))
+        }
+    </script>
+</head>
+<body onmousedown="backGroundColorChanger(event)" onkeydown="keyPress(event)">
+    <div class="container">
+        <header class="main-header">
+            <h1>
+                Resumé - Site
+            </h1>
+            <nav>
+                <a href="Portfolio.html"><h1>Portfolio</h1></a>
+                <a href="aboutMe.html"><h1>About</h1></a>
+                <a href="index.html" class="active"><h1>Home</h1></a>
+                <a href="cv.html"><h1>Resumé</h1></a>
+                <a href="lorem.html"><h1>Lorem</h1></a>
+            </nav>
+        </header>
+        <div>
+            <h1 class="active"><strong>Home Page</strong></h1>
+            <img src="html5.png" height="auto" width="40%" alt="HTML5 Logo"> 
+            <div class="row">
+                <div class="column">
+                    <a href="Portfolio.html"><h1><strong>Portfolio</strong></h1></a>
+                    <p>A page about different projects</p>
+                </div>
+                <div class="column">
+                    <a href="aboutMe.html"><h1><strong>About</strong></h1></a>
+                    <p>About page you can read about the creator of this website (me) or about the website itself</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <a href="cv.html"><h1><strong>Resumé</strong></h1></a>
+                    <p>Page about my previous work experiences and educations</p>
+                </div>
+
+                <div class="column">
+                    <a href="lorem.html"><h1><strong>Lorem</strong></h1></a>
+                    <p>Lorem page, page if filled with placeholder latin text</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

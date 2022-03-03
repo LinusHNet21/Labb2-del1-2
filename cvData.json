@@ -1,0 +1,25 @@
+{
+    "Education": {
+        "1":{
+            "Edu":"2018 - 2021 Electricity and Energy program, Computer and Communication Technology specialization.",
+            "EduLink":"NTI Gymnasiet Umeå.",
+            "EduDesc":"The training includes: Communication between computers and network devices, knowledge of computers components and logic circuits and programming for automation."
+        }
+    },
+
+    "WorkXp":{
+        "1":{
+            "WrkXp":"Summer 2018 - Vindelns Kyrkogård",
+            "WrkXpDesc":"Standard gardening and taking care of plants and paths"
+        },
+        "2":{
+            "WrkXp2":"APL 2019 - SLU Svartberget",
+            "WrkXp2Desc":"Management of test samples, installation of network equipment and research equipment"
+            },
+
+        "3":{
+            "WrkXp3":"Summer 2020 - SLU Svartberget",
+            "WrkXp3Desc":"Management of test samples, dismantling of research projects"
+            }
+    }
+}

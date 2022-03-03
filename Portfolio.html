@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumé - Site: Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1>
+                Resumé - Site
+            </h1>
+            <nav>
+                <a href="Portfolio.html"class="active"><h1>Portfolio</h1></a>
+                <a href="aboutMe.html"><h1>About</h1></a>
+                <a href="index.html"><h1>Home</h1></a>
+                <a href="cv.html"><h1>Resumé</h1></a>
+                <a href="lorem.html"><h1>Lorem</h1></a>
+            </nav>
+        </header>
+        <div>
+            <h1 class="active">Portfolio</h1>
+            <div class="row">
+                <!--1st Project-->
+                <div class="column">
+                    <h2>Person Registry</h2>
+                    <img src="PersonRegistry.PNG" alt="Picture of project">
+                    <div class="main">
+                        <a href="#PersonRegistry" id="btn" class="btn">More info</a>
+                    </div>
+                    <div id="PersonRegistry" class="modal">
+                        <div class="content">
+                            <!--Popup Contents-->
+                            <a href="Portfolio.html" class="close">&Cross;</a>
+                            <h2>Person Registry</h2>
+                            <div class="row">
+                                <div class="column">
+                                    <p>Person Registry was an assignment i got give while doing my C# course.<br>
+                                        We were to create a program where you could add users to a registry with a graphical interface.<br>
+                                        Project required features:
+                                        <ul>
+                                            <li><dt>An Add-button</dt><dd>Clicking 'Add' would create a user with the first and lastname from the boxes, and gender from the radio buttons.<br>
+                                            Created users endup in the Persons listbox with a prefix telling their gender.</dd></li>
+                                            <li><dt>Remove-button</dt><dd>Remove button removes all selected users from the registry.</dd></li>
+                                            <li><dt>Merge function</dt><dd>Merge function is used to make child of the two people of different genders that are selected.<br>
+                                            First name is inherited from the mother and last name from the father.</dd></li>
+                                        </ul>
+                                        App also has some error handling when typing first/lastname, trying ot merge more than two people and people of the same gender.</p>
+                                </div>
+                                <div class="column">
+                                    <img src="PersonRegistry.PNG" alt="Picture of the applications layout">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--2nd Project-->
+                <div class="column">
+                    <h2>Practice: Files</h2>
+                    <img src="Files.PNG" alt="Console with colorful text" width="85%" height="auto">
+                    <div class="main">
+                        <a href="#PracticeFile" id="btn" class="btn">More info</a>
+                    </div>
+                    <div id="PracticeFile" class="modal">
+                        <div class="content">
+                            <!--Popup Content-->
+                            <a href="Portfolio.html" class="close">&Cross;</a>
+                            <h2>Practice: Files</h2>
+                            <div class="row">
+                                <div class="column">
+                                   <p>This Files assignment was only practice opportunity, but I 'finished' it ahead of the deadline and i gave it my own touch and challenged myself.<br>
+                                    The assignment was to make a program that creates a text-file with the numbers 1-100, one number per row.<br>
+                                    Second part of the assignment was to make a program that would open the text-file and write all its content in the console.<br>
+                                    After completing the first half and reading the second part. I asked the teacher if i could put the two parts together.<br>
+                                    They approved. And i got to work with combining the two into on application, which i did in 15 minuts.<br>
+                                    I then added a menu that the user could maneuver though with the arrow keys and added some othat fancy options like:<br>
+                                    <ul>
+                                        <li>Adding number to a file</li>
+                                        <li>Writing content from file to console</li>
+                                        <li>Open the text-file</li>
+                                        <li>Delete the file</li>
+                                        <li>And close the program</li>
+                                    </ul>
+                                    After this I was happy with the result and handed it in</p>
+                                </div>
+                                <div class="column">
+                                    <img src="Files.PNG" alt="Picture of application console" width="85%" height="auto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

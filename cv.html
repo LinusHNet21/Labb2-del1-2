@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumé - Site: Resumé</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+</head>
+<body>
+    <script>
+        const filUrl = "cvData.json";
+        async function GetData() {
+            const response = await fetch(filUrl);
+            const data = await response.json();
+            console.log(data)
+            
+            // Education
+            document.getElementById("Edu").textContent = data.Education["1"].Edu;
+            document.getElementById("EduLink").textContent = data.Education["1"].EduLink;
+            document.getElementById("EduDesc").textContent = data.Education["1"].EduDesc;
+
+            //Work Experience
+            document.getElementById("WrkXp").textContent = data.WorkXp["1"].WrkXp;
+            document.getElementById("WrkXpDesc").textContent = data.WorkXp["1"].WrkXpDesc;
+
+            document.getElementById("WrkXp2").textContent = data.WorkXp["2"].WrkXp2;
+            document.getElementById("WrkXp2Desc").textContent = data.WorkXp["2"].WrkXp2Desc;
+
+            document.getElementById("WrkXp3").textContent = data.WorkXp["3"].WrkXp3;
+            document.getElementById("WrkXp3Desc").textContent = data.WorkXp["3"].WrkXp3Desc;
+        }
+        GetData();
+    </script>
+
+    <div class="container">
+        <header class="main-header">
+            <h1>
+                Resumé - Site
+            </h1>
+            <nav>
+                <a href="Portfolio.html"><h1>Portfolio</h1></a>
+                <a href="aboutMe.html"><h1>About</h1></a>
+                <a href="index.html"><h1>Home</h1></a>
+                <a href="cv.html" class="active"><h1>Resumé</h1></a>
+                <a href="lorem.html"><h1>Lorem</h1></a>
+            </nav>
+        </header>
+        <div>
+            <h1 class="active">Resumé</h1>
+            <div class="resume">
+                <dl>
+                    <dt>Linus Holmgren</dt>
+                    <dt>Stengatan 6</dt>
+                    <dt>82430 Hudiksvall</dt>
+                    <dt>linush89@gmail.com</dt>
+                    <dt>070-513-44-76</dt>
+                </dl>
+                <h3>Educations</h3>
+                <ul>
+                    <li><dt><span id="Edu"></span></dt>
+                        <dt><a href="https://www.ntigymnasiet.se/umea/" style="color: black;"><strong><span id="EduLink"></span></strong></a></dt>
+                    <dd><span id="EduDesc"></span></dd></li>
+                </ul>
+                <h3>Previous experience</h3>
+                <ul>
+                    <li><dt><span id="WrkXp"></span></dt>
+                    <dd><span id="WrkXpDesc"></span></dd></li>
+                    
+                    <li><dt><span id="WrkXp2"></span></dt>
+                    <dd><span id="WrkXp2Desc"></span></dd></li>
+
+                    <li><dt><span id="WrkXp3"></span></dt>
+                    <dd><span id="WrkXp3Desc"></span></dd></li>
+                </ul>
+                <h3>Other</h3>
+                <ul>
+                    <li><dt>Certification:</dt>
+                    <dd>98-381:MTA: Introduction to Programming using Python</dd></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

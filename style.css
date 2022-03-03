@@ -1,0 +1,131 @@
+body{
+    background-color: #2C2F33;
+    margin: 0;
+    text-align: center;
+    border-top: 10px solid #7289DA;
+    border-bottom: 10px solid #7289DA;
+    font-family: "Trirong", serif;
+}
+.main-header {
+    text-align: center;
+    margin-bottom: 2%;
+}
+.container {
+    display: flexbox;
+}
+.active {
+    text-decoration: underline orange;
+    text-underline-offset: 2px;
+}
+a {
+    color: #97A9B4;
+    text-decoration: underline green;
+    text-underline-offset: 2px;
+}
+nav a:link {
+    margin-right: 30px;
+    margin-top: 15px;
+    display: inline-block;
+}
+nav a:link:last-child {
+    margin-right: 0;
+}
+h1,
+h2,
+p{
+    color:#97A9B4;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.resume {
+    margin-right: 30%; 
+    margin-left: 30%; 
+    text-align: left; 
+    background-color: white; 
+    color: black; 
+    padding: 1%;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.btn {
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #23272A;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    outline: none;
+}
+.modal {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.25);
+    width: 80vw;
+    height: 70vh;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    background-color: whitesmoke;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0,5s 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.close,
+.close:link,
+.close:visited {
+    color: gray;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 2.5rem;
+    display: inline-block;
+    line-height: 1;   
+    transition: all 0.2s;
+}
+.close:hover {
+    color: red;
+}
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+}
+.modal:target .content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.content h2{
+    color: black;
+}
+.content p{
+    color: black;
+}
